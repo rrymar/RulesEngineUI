@@ -1,10 +1,12 @@
-import './FilterQueryBuilder.css';
+import './InputMapper.css';
 import {useState} from 'react';
 import {formatQuery, QueryBuilder} from 'react-querybuilder';
 import {QueryBuilderBootstrap} from '@react-querybuilder/bootstrap';
 import 'react-querybuilder/dist/query-builder.css';
 
-const fields = [
+const defaultOperators = [{ name: '=', label: '='}];
+
+const fromFields = [
     {name: 'RecordNumber', label: 'Record Number'},
     {name: 'DisclosureDate', label: 'Disclosure Date'},
     {name: 'Institution', label: 'Institution'},
@@ -16,29 +18,33 @@ const fields = [
     {name: 'Form.Support.IsGovernmentFundingSupport', label: 'Form.Support.IsGovernmentFundingSupport'},
     {name: 'Form.FormName.QuestionName', label: 'Form.FormName.QuestionName'}
 ];
-export default function FilterQueryBuilder() {
+
+const toFields = [
+    {name: "Docket.Name", label: "Docket.Name"},  
+    {name: "Docket.Field1", label: "Docket.Field1", operators: defaultOperators, valueEditorType: 'select', values: fromFields }, 
+    {name: "Docket.Field2", label: "Docket.Field2", operators: defaultOperators, valueEditorType: 'select', values: fromFields }, 
+    {name: "Docket.Field3", label: "Docket.Field3", operators: defaultOperators, valueEditorType: 'select', values: fromFields }, 
+    {name: "Docket.Assignee", label: "Docket.Assignee", operators: defaultOperators, valueEditorType: 'select', values: fromFields }  
+];
+
+export default function InputMapper() {
     const [query, setQuery] = useState({
         combinator: 'and',
         rules: [
-            {field: 'RecordNumber', operator: 'beginsWith', value: '2023'},
-            {field: 'Institution', operator: 'in', value: 'Org1,Org2'},
-            {field: 'Category', operator: '=', value: 'Patent'},
-            {field: 'Owner', operator: '=', value: 'Ruslan Rymar'},
-            {field: 'Form.Support.IsGovernmentFundingSupport', operator: '=', value: 'No'},
-            {field: 'Form.FormName.QuestionName', operator: '=', value: 'Yes'}
+            {field: 'Docket.Name', operator: '=', value: 'New Docket Item'},
+            {field: 'Docket.Assignee', operator: '=', value: 'Owner'},
+            {field: 'Docket.Field1', operator: '=', value: 'Form.FormName.QuestionName'},
         ],
     });
 
     return (
-        <>
-            <div>2. Query Builder</div>
+        <div className="input-mappper">
+            <div>3. Map fields of created entity</div>
             <QueryBuilderBootstrap>
-                <QueryBuilder fields={fields} query={query}
+                <QueryBuilder fields={toFields} query={query}
                               controlClassnames={{queryBuilder: 'queryBuilder-branches'}}
                               onQueryChange={q => setQuery(q)}/>
             </QueryBuilderBootstrap>
-            Query
-            <i>{formatQuery(query, 'sql')}</i>
-        </>
+        </div>
     );
 }

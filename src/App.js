@@ -1,6 +1,7 @@
 import './App.css';
 import DatasourceSelector from "./DatasourceSelector";
 import FilterQueryBuilder from "./FilterQueryBuilder";
+import InputMapper from "./InputMapper";
 
 function App() {
   return (
@@ -18,6 +19,11 @@ function App() {
           <div className="row">
               <div className="col p-2">
                <FilterQueryBuilder />
+              </div>
+          </div>
+          <div className="row">
+              <div className="col p-2">
+                  <InputMapper />
               </div>
           </div>
       </div>
