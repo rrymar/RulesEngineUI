@@ -13,7 +13,7 @@ const fields = [
     {name: 'Form.Disclosure.InventionDescription', label: 'Form.Disclosure.InventionDescription'},
     {name: 'Form.Disclosure.DisclosedInThePast', label: 'Form.Disclosure.DisclosedInThePast'},
     {name: 'Form.Support.ThirdPartySupport', label: 'Form.Support.ThirdPartySupport'},
-    {name: 'Form.Support.IsGovernmentFundingSupport', label: 'Form.Support.IsGovernmentFundingSupport'},
+    {name: 'Form.Support.IsFundingSupported', label: 'Form.Support.IsFundingSupported'},
     {name: 'Form.FormName.QuestionName', label: 'Form.FormName.QuestionName'}
 ];
 export default function FilterQueryBuilder() {
@@ -24,7 +24,7 @@ export default function FilterQueryBuilder() {
             {field: 'Institution', operator: 'in', value: 'Org1,Org2'},
             {field: 'Category', operator: '=', value: 'Patent'},
             {field: 'Owner', operator: '=', value: 'Ruslan Rymar'},
-            {field: 'Form.Support.IsGovernmentFundingSupport', operator: '=', value: 'No'},
+            {field: 'Form.Support.IsFundingSupported', operator: '=', value: 'No'},
             {field: 'Form.FormName.QuestionName', operator: '=', value: 'Yes'}
         ],
     });

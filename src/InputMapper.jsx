@@ -16,7 +16,7 @@ const fromFields = [
     {name: 'Form.Disclosure.InventionDescription', label: 'Form.Disclosure.InventionDescription'},
     {name: 'Form.Disclosure.DisclosedInThePast', label: 'Form.Disclosure.DisclosedInThePast'},
     {name: 'Form.Support.ThirdPartySupport', label: 'Form.Support.ThirdPartySupport'},
-    {name: 'Form.Support.IsGovernmentFundingSupport', label: 'Form.Support.IsGovernmentFundingSupport'},
+    {name: 'Form.Support.IsFundingSupported', label: 'Form.Support.IsFundingSupported'},
     {name: 'Form.FormName.QuestionName', label: 'Form.FormName.QuestionName'}
 ];
 
