@@ -1,6 +1,6 @@
 import './InputMapper.css';
 import {useState} from 'react';
-import {formatQuery, QueryBuilder} from 'react-querybuilder';
+import {QueryBuilder} from 'react-querybuilder';
 import {QueryBuilderBootstrap} from '@react-querybuilder/bootstrap';
 import 'react-querybuilder/dist/query-builder.css';
 
