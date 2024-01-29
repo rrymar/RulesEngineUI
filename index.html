@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Rules Engine</title>
+    <script type="importmap">
+        {
+            "imports": {
+                "preact": "https://esm.sh/preact",
+                "preact/": "https://esm.sh/preact/",
+                "htm": "https://esm.sh/htm"
+            }
+        }
+    </script>
 </head>
 <body>
-<script type="module">
-    import {h, Component, render} from 'https://unpkg.com/preact?module';
-
-    // Create your app
-    const app = h('h1', null, 'Hello World!');
-
-    render(app, document.body);
-</script>
+    <h2>Rules Engine Prototype</h2>
+    <div id="app"></div>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
