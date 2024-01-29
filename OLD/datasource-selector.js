@@ -6,7 +6,7 @@ function DatasourceSelector(props) {
             <div>
                 <label for="datasource">Please Select Datasource Record</label>
             </div>
-            <select name="datasource" class="form-select">
+            <select name="datasource" class="form-select" style="width: auto">
                 <option value="Invention">Invention Record</option>
                 <option value="IP">IP Record</option>
             </select>
