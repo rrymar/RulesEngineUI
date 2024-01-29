@@ -26,8 +26,8 @@ const toFields = [
     {name: "Docket.Field2", label: "Docket.Field2", operators: defaultOperators, valueEditorType: 'select', values: fromFields }, 
     {name: "Docket.Field3", label: "Docket.Field3", operators: defaultOperators, valueEditorType: 'select', values: fromFields }, 
     {name: "Docket.Assignee", label: "Docket.Assignee", operators: defaultOperators, valueEditorType: 'select', values: fromFields },  
-    {name: "Docket.ComplexField1", label: "Docket.Assignee", operators: defaultOperators },  
-    {name: "Docket.ComplexField2", label: "Docket.Assignee", operators: defaultOperators }  
+    {name: "Docket.ComplexField1", label: "Docket.ComplexField1", operators: defaultOperators },  
+    {name: "Docket.ComplexField2", label: "Docket.ComplexField2", operators: defaultOperators }  
 ];
 
 export default function InputMapper() {
