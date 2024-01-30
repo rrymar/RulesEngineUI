@@ -16,10 +16,19 @@ const institutions = [
     {name: "4", label: "Org4"},
 ]
 
+const dateOperators = [
+    { name: '=', label: '='},
+    { name: 'daysBefore', label: 'Days Before'},
+    { name: '>', label: '>'},
+    { name: '<', label: '<'},
+    { name: '<=', label: '<='},
+    { name: '>=', label: '>='},
+]
+
 const fields = [
     {name: 'RecordNumber', label: 'Record Number'},
-    {name: 'DisclosureDate', label: 'Disclosure Date'},
-    {name: 'Institution', label: 'Institution',valueEditorType: "select", values: institutions},
+    {name: 'DisclosureDate', label: 'Disclosure Date', inputType: 'date', operators: dateOperators},
+    {name: 'Institution', label: 'Institution',valueEditorType: 'select', values: institutions},
     {name: 'Owner', label: 'Owner Person'},
     {name: 'Category', label: 'Category'},
     {name: 'Form.Disclosure.InventionDescription', label: 'Form.Disclosure.InventionDescription'},
@@ -34,6 +43,7 @@ export default function FilterQueryBuilder() {
         rules: [
             {field: 'RecordNumber', operator: 'beginsWith', value: '2023'},
             {field: 'Institution', operator: 'in', value: 'Org1,Org2'},
+            {field: 'DisclosureDate', operator: '<=', value: "2024-01-16"},
             {field: 'Category', operator: '=', value: 'Patent'},
             {field: 'Owner', operator: '=', value: 'Ruslan Rymar'},
             {field: 'Form.Support.IsFundingSupported', operator: '=', value: 'No'},
