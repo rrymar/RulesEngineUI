@@ -32,6 +32,11 @@ function App() {
                   <OutMapper />
               </div>
           </div>
+          <div className="row">
+              <div className="col p-2">
+                  <hr/>
+              </div>
+          </div>
       </div>
   );
 }
