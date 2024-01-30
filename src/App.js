@@ -2,6 +2,7 @@ import './App.css';
 import DatasourceSelector from "./DatasourceSelector";
 import FilterQueryBuilder from "./FilterQueryBuilder";
 import InputMapper from "./InputMapper";
+import OutMapper from "./OutMapper";
 
 function App() {
   return (
@@ -24,6 +25,11 @@ function App() {
           <div className="row">
               <div className="col p-2">
                   <InputMapper />
+              </div>
+          </div>
+          <div className="row">
+              <div className="col p-2">
+                  <OutMapper />
               </div>
           </div>
       </div>

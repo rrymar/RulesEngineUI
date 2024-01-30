@@ -1,0 +1,11 @@
+[data-testid="operators"]{
+    width: 20%;
+}
+
+[data-testid="fields"]{
+    width: 30%;
+}
+
+[data-testid="value-editor"]{
+    width: 50%;
+}
